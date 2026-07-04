@@ -1,61 +1,90 @@
-🚀 SentinelStream – FinTech Backend Project
+# SentinelStream
 
-SentinelStream is a FinTech transaction monitoring backend built using FastAPI. It implements secure user authentication and transaction management using modern backend practices.
+SentinelStream is a FinTech transaction monitoring backend built with **FastAPI**, **PostgreSQL**, **SQLAlchemy Async**, and **JWT authentication**.
 
-🔑 Key Features
+The project demonstrates secure backend API development for user authentication, protected routes, and financial transaction management.
 
-User Registration & Login
+## Project Overview
 
-JWT-based Authentication
+SentinelStream focuses on building a clean backend foundation for financial transaction workflows. It includes user registration, login, JWT-based authentication, password hashing, transaction creation, and protected transaction retrieval.
 
-Secure Password Hashing
+## Key Features
 
-Create & Fetch Financial Transactions
+- User registration and login
+- JWT-based authentication
+- Secure password hashing
+- Protected API routes
+- Create financial transactions
+- Fetch authenticated user transactions
+- PostgreSQL database integration
+- Async SQLAlchemy ORM usage
+- Interactive Swagger API documentation
 
-Protected APIs with Token Authorization
+## Tech Stack
 
-🛠️ Tech Stack
+| Area | Tools |
+|---|---|
+| Backend | FastAPI, Python |
+| Database | PostgreSQL |
+| ORM | SQLAlchemy Async |
+| Authentication | JWT |
+| Server | Uvicorn |
+| API Docs | Swagger UI / OpenAPI |
 
-Backend: FastAPI (Python)
+## Authentication Flow
 
-Database: PostgreSQL
+1. Register a new user
+2. Login with credentials
+3. Receive a JWT access token
+4. Send the token in the request header
+5. Access protected transaction APIs
 
-ORM: SQLAlchemy (Async)
-
-Authentication: JWT
-
-Server: Uvicorn
-
-▶️ How to Run
-uvicorn app.main:app --reload
-
-App runs at:
-
-http://127.0.0.1:8000
-📑 API Docs
-
-Swagger UI: http://127.0.0.1:8000/docs
-
-🔐 Authentication Flow
-
-Register user
-
-Login to receive JWT token
-
-Use token in request header:
-
+```http
 Authorization: Bearer <token>
+```
 
-Access transaction APIs
+## API Documentation
 
-🎯 Purpose
+After starting the server, open:
 
-This project demonstrates:
+```text
+http://127.0.0.1:8000/docs
+```
 
-Secure FinTech backend development
+## Local Setup
 
-JWT authentication flow
+```bash
+git clone https://github.com/Kaif0333/SentinelStream.git
+cd SentinelStream
+```
 
-Async database operations
+Install dependencies based on the project requirements file if available:
 
-Real-world API design
+```bash
+pip install -r requirements.txt
+```
+
+Run the FastAPI app:
+
+```bash
+uvicorn app.main:app --reload
+```
+
+The app runs at:
+
+```text
+http://127.0.0.1:8000
+```
+
+## Example API Areas
+
+| Area | Description |
+|---|---|
+| Auth | Register and login users |
+| Transactions | Create and fetch financial transactions |
+| Protected Routes | Access APIs only with a valid JWT token |
+| API Docs | Explore endpoints through Swagger UI |
+
+## Purpose
+
+This project demonstrates real-world backend development skills for FinTech-style applications, including authentication, database operations, protected APIs, and clean API design.
